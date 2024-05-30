@@ -1,0 +1,43 @@
+﻿<Window x:Class="Avtopark.vhod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtopark"
+        mc:Ignorable="d"
+xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Автопарк" Height="600" Width="1000">
+    <Grid Background="#FFFCD6">
+
+        <Border MinWidth="400" Margin="60,0,60,0" Background="white" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20" Height="308" RenderTransformOrigin="0.,0.5" >
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.017"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightCyan" ShadowDepth="0">
+
+                </DropShadowEffect>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Авторизация" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" HorizontalAlignment="Center">
+
+                </TextBlock>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Center" Content="Войти" Foreground="#FF9513DD" Width="134" Margin="0,151,0,-186"  Click="Park_Button_Click"/>
+                </Grid>
+                <TextBlock Text="Введите логин"/>
+                <TextBox x:Name="textLogin" Height="30" RenderTransformOrigin="0.498,0.52" />
+                <TextBlock Text="Введите пароль"/>
+                <PasswordBox x:Name="textPass"  Height="33" />
+            </StackPanel>
+        </Border>
+        <Label Content="АО Турбодуй" HorizontalAlignment="Center" Margin="0,38,0,0" VerticalAlignment="Top" Width="154" Height="56" FontWeight="Bold" FontSize="20"/>
+        <Image Margin="10,10,860,490" Source="/ikonka.png" Stretch="Fill"/>
+
+    </Grid>
+</Window>
